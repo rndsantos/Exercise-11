@@ -1,0 +1,427 @@
+<!-- 
+Author: Roberto Neil Santos
+Section: B-5L
+Creation Date: 11-30-23
+Code Description
+  A website form for setting up a party that asks
+  various information from the user
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./santos_ex11.css" />
+    <link rel="icon" type="image/x-icon" href="./img/icons/favicon_bee.png" />
+    <title>Party Form</title>
+    <script defer src="./santos_ex11.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="./img/icons/logo.png" alt="" />
+      </div>
+      <form>
+        <div class="input-group">
+          <div class="header">
+            <img src="./img/icons/account.png" class="icon" alt="" />
+            <h3>Customer Information</h3>
+          </div>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="tel"
+            name="mobile"
+            id="mobile"
+            placeholder="Mobile Number (09XXXXXXXXX)"
+            pattern="[0]{1}[9]{1}[0-9]{9}"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div>
+          <div class="header">
+            <img src="./img/icons/list.png" class="icon" alt="" />
+            <h3>Party Details</h3>
+          </div>
+          <input
+            type="number"
+            name="people"
+            id="people"
+            placeholder="# of People"
+            min="10"
+            required
+          />
+          <h5 class="sub-header">Appetizer</h5>
+          <div class="selector">
+            <div>
+              <input
+                type="radio"
+                name="appetizer"
+                id="salad"
+                value="Salad"
+                checked
+              />
+              <label for="salad"></label>
+              <div class="caption">
+                <h5>SALAD</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="appetizer"
+                id="bread-w-dip"
+                value="Bread w/ Dip"
+              />
+              <label for="bread-w-dip"></label>
+              <div>
+                <h5>BREAD W/ DIP</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="appetizer"
+                id="tomato-surprise"
+                value="Tomato Surprise"
+              />
+              <label for="tomato-surprise"></label>
+              <div>
+                <h5>TOMATO SURPIRSE</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="appetizer"
+                id="msh-bites"
+                value="Mushroom Bites"
+              />
+              <label for="msh-bites"></label>
+              <div>
+                <h5>MUSHROOM BITES</h5>
+              </div>
+            </div>
+          </div>
+          <h5 class="sub-header">Main Dishes</h5>
+          <div class="selector">
+            <div>
+              <input
+                type="checkbox"
+                name="main-dish"
+                id="rst-beef"
+                value="Roast Beef"
+              />
+              <label for="rst-beef"></label>
+              <div>
+                <h5>Roast Beef</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="main-dish"
+                id="beef-stk"
+                value="Beef Steak"
+              />
+              <label for="beef-stk"></label>
+              <div>
+                <h5>Beef Steak</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="main-dish"
+                id="pork-spr"
+                value="Pork Spareribs"
+              />
+              <label for="pork-spr"></label>
+              <div>
+                <h5>Pork Spareribs</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="main-dish"
+                id="pork-mrb"
+                value="Pork Marbella"
+              />
+              <label for="pork-mrb"></label>
+              <div>
+                <h5>Pork Marbella</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="main-dish"
+                id="grl-chck"
+                value="Grilled Chicken"
+              />
+              <label for="grl-chck"></label>
+              <div>
+                <h5>Grilled Chicken</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="main-dish"
+                id="rst-chck"
+                value="Roast Chicken"
+              />
+              <label for="rst-chck"></label>
+              <div>
+                <h5>Roast Chicken</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="main-dish"
+                id="brl-salm"
+                value="Broiled Salmon"
+              />
+              <label for="brl-salm"></label>
+              <div>
+                <h5>Broiled Salmon</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="main-dish"
+                id="grl-salm"
+                value="Grilled Salmon"
+              />
+              <label for="grl-salm"></label>
+              <div>
+                <h5>Grilled Salmon</h5>
+              </div>
+            </div>
+          </div>
+          <h5 class="sub-header">Desserts</h5>
+          <div class="selector">
+            <div>
+              <input
+                type="checkbox"
+                name="desserts"
+                id="mlt-choc-cake"
+                value="Molten Chocolate Cake"
+              />
+              <label for="mlt-choc-cake"></label>
+              <div>
+                <h5>Molten Choco Cake</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="desserts"
+                id="red-velv-cake"
+                value="Red Velvet Cake"
+              />
+              <label for="red-velv-cake"></label>
+              <div>
+                <h5>Red Velvet Cake</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="desserts"
+                id="lemon-bar"
+                value="Lemon Bars"
+              />
+              <label for="lemon-bar"></label>
+              <div>
+                <h5>Lemon Bars</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="desserts"
+                id="pnt-btr-bar"
+                value="Peanut Butter Bars"
+              />
+              <label for="pnt-btr-bar"></label>
+              <div>
+                <h5>Peanut Butter Bars</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="desserts"
+                id="buko-pie"
+                value="Buko Pie"
+              />
+              <label for="buko-pie"></label>
+              <div>
+                <h5>Buko Pie</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="desserts"
+                id="lmn-mrng"
+                value="Lemon Meringue Pie"
+              />
+              <label for="lmn-mrng"></label>
+              <div>
+                <h5>Lemon Meringue Pie</h5>
+              </div>
+            </div>
+          </div>
+          <h5 class="sub-header">Type of Rice</h5>
+          <div class="selector">
+            <div>
+              <input
+                type="radio"
+                name="rice"
+                id="plain"
+                value="Plain"
+                checked
+              />
+              <label for="plain"></label>
+              <div>
+                <h5>Plain</h5>
+              </div>
+            </div>
+            <div>
+              <input type="radio" name="rice" id="garlic" value="Garlic" />
+              <label for="garlic"></label>
+              <div>
+                <h5>Garlic</h5>
+              </div>
+            </div>
+            <div>
+              <input type="radio" name="rice" id="bagoong" value="Bagoong" />
+              <label for="bagoong"></label>
+              <div>
+                <h5>Bagoong</h5>
+              </div>
+            </div>
+          </div>
+          <h5 class="sub-header">Drinks</h5>
+          <div class="selector">
+            <div>
+              <input
+                type="radio"
+                name="drink"
+                id="cucm-lmn"
+                value="Cucumber Lemonade"
+                checked
+              />
+              <label for="cucm-lmn"></label>
+              <div>
+                <h5>Cucumber Lemonade</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="drink"
+                id="red-iced-tea"
+                value="Red Iced Tea"
+              />
+              <label for="red-iced-tea"></label>
+              <div>
+                <h5>Red Iced Tea</h5>
+              </div>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="drink"
+                id="rp-mngo-jc"
+                value="Ripe Mango Juice"
+              />
+              <label for="rp-mngo-jc"></label>
+              <div>
+                <h5>Ripe Mango Juice</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="header">
+            <img src="./img/icons/fast-delivery.png" class="icon" alt="" />
+            <h3>Delivery Details</h3>
+          </div>
+          <div class="selector">
+            <div class="selector__delivery">
+              <input
+                type="radio"
+                name="delivery-method"
+                id="pickup"
+                value="Store Pickup"
+                checked
+              />
+              <label for="pickup"></label>
+              <div>
+                <h5>Store Pickup</h5>
+              </div>
+            </div>
+            <div class="selector__delivery">
+              <input
+                type="radio"
+                name="delivery-method"
+                id="delivery"
+                value="Delivery"
+              />
+              <label for="delivery"></label>
+              <div>
+                <h5>Delivery</h5>
+              </div>
+            </div>
+          </div>
+          <h5 class="sub-header">Address</h5>
+          <textarea
+            name="party-details"
+            id="address"
+            placeholder="Address here..."
+            cols="50"
+            rows="5"
+            required
+          ></textarea>
+          <div id="container__date">
+            <h5 class="sub-header">Party Date</h5>
+            <input type="date" name="party-details" id="party-date" />
+          </div>
+          <div id="container__time">
+            <h5 class="sub-header">Party Time</h5>
+            <input type="time" name="party-details" id="party-time" />
+          </div>
+        </div>
+        <div class="button-group">
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<!-- 
+REFERENCES:
+https://jsfiddle.net/La8wQ/313/
+https://www.flaticon.com/free-icon 
+-->
